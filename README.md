@@ -80,6 +80,8 @@ Dla każdego słowa występującego w `tytule` chcemy policzyć w ilu dokumentac
 
 Aby to policzyć użyjemy podwójnego MapReduce. 
 
+---
+
 ###MapReduce 1
 
 Dla każdego słowa z `tytułu` dokumentu `emitujemy` klucz będący parą wartości `{słowo, id dokumentu}`. 
@@ -131,6 +133,8 @@ db.train1.mapReduce(m, r, {out: "wcdocs"});
   "ok" : 1,
 }
 ```
+
+---
 
 ###MapReduce 2
 
@@ -211,6 +215,8 @@ db.wc.find().sort({value: -1}).limit(10);
 
 ![3-mongo-map-reduce-res-review-1](./images/3-mongo-mp-1.png)
 
+---
+
 ####10 najpopularniejszych języków
 
 Języki zostały wybrane na podstawie tagów.
@@ -253,6 +259,7 @@ db.wc.find({
 
 ![3-mongo-map-reduce-res-review-2](./images/3-mongo-mp-2.png)
 
+---
 
 ####Popularne systemy operacyjne
 
